@@ -22,11 +22,23 @@ To run this program, you need:
 2. **Dockerfile**  
    Here's a part of the `Dockerfile` that shows the command line input for the program:
    ```Dockerfile
-
    # Default command to run the program
    CMD ["./dining_philosophers", "30"]
+   ````
+   To change the Run Time (in seconds), just change the second input value to the desired integer
+   **To Build the Container, run the following command:**
+   ````Dockerfile
+   docker build -t dining_philosophers .
+   ````
+   **To Run the Executable, run the following command:**
+   ````Dockerfile
+   docker run --rm dining_philosophers .
+   ````
+   The program will take at minimum the amount of time determined in the argument value.
+
+3. **Report**
    
-## Report
+## Report for times 30s - 80s (+10s interval)
 | Run Time (seconds) | Minimum Meals | Maximum Meals | Average Meals |
 |--------------------|---------------|---------------|---------------|
 | 30                 | 4             | 6             | 5.20          |
